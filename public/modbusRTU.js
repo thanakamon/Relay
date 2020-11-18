@@ -1,7 +1,7 @@
 angular.module('app',[])
 .controller('modbusCtrl',['$scope','$http',function($scope,$http){
     $scope.toggleRelay=function(ch){
-        $http.get('http://localhost:3009/modbus/ch/'+ch)
+        $http.get('http://192.168.2.7:3009/modbus/ch/'+ch)
         .then((response)=>{
             console.log(response);
         }).catch((err)=>{
