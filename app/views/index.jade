@@ -1,0 +1,12 @@
+doctype html
+html(lang="en")
+    head
+        meta(charset='utf-8')
+        meta(name='viewport', content='width=device-width, initial-scale=1.0')
+    body(ng-app='app')
+        h1 Relay Controller
+        div(ng-controller='modbusCtrl')
+            button(ng-click='toggleRelay(1)') RELAY CH.1
+            button(ng-click='toggleRelay(2)') RELAY CH.2
+        script(type='text/javascript', src='/lib/angular/angular.min.js')
+        script(src="/modbusRTU.js")
