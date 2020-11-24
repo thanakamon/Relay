@@ -1,7 +1,7 @@
 angular.module('app',[])
 .controller('modbusCtrl',['$scope','$http',function($scope,$http){
     $scope.toggleRelay=function(ch){
-        $http.get('http://192.168.2.7:3009/modbus/ch/'+ch)
+        $http.get('http://192.168.2.7:3008/modbus/ch/'+ch)
         .then((response)=>{
             console.log(response);
         }).catch((err)=>{
@@ -10,7 +10,7 @@ angular.module('app',[])
     }
 
     $scope.turnOnRelay=function(ch){
-        $http.get('http://192.168.2.7:3009/modbus/on/'+ch)
+        $http.get('http://192.168.2.7:3008/modbus/on/'+ch)
         .then((response)=>{
             console.log(response);
         }).catch((err)=>{
@@ -19,7 +19,7 @@ angular.module('app',[])
     }
 
     $scope.turnOffRelay=function(ch){
-        $http.get('http://192.168.2.7:3009/modbus/off/'+ch)
+        $http.get('http://192.168.2.7:3008/modbus/off/'+ch)
         .then((response)=>{
             console.log(response);
         }).catch((err)=>{
